@@ -2,7 +2,7 @@ const request = require('request')
 
 //  GETTING THE LOCATION ID
 function geoCode(address, callBack) {
-    const url = 'http://dataservice.accuweather.com/locations/v1/search?q=' + encodeURIComponent(address) + '&apikey=YB0E4GxXuGreGdJlJR86G5x6VAxht4gE'
+    const url = 'https://dataservice.accuweather.com/locations/v1/search?q=' + encodeURIComponent(address) + '&apikey=YB0E4GxXuGreGdJlJR86G5x6VAxht4gE'
 
     request({ url, json: true }, (error, { body }) => {
         if (error) {

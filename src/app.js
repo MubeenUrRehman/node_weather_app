@@ -1,8 +1,8 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
-/* const geoCode = require('./utils/geoCode')
-const forecast = require('./utils/forecast') */
+const geoCode = require('./utils/geoCode')
+const forecast = require('./utils/forecast')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -52,7 +52,7 @@ app.get('/help/*', (req, res) => {
     })
 })
 
-/* app.get('/weather', (req, res) => {
+app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
             error: 'Please provide an address!'
@@ -79,7 +79,7 @@ app.get('/help/*', (req, res) => {
             })
         })
     })
-}) */
+})
 
 app.get('*', (req, res) => {
     res.render('404', {
